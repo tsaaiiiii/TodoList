@@ -54,7 +54,7 @@ finished.addEventListener("click", function (e) {
   let done = "";
   data.forEach(function (item, index) {
     if (item.status == "Finished") {
-      done += `<li><p>📍</p><h3>${item.content}</h3><input type="button" class="check"data-number="${index}" value="✔" /><input type="button" class="delete" data-num ="${index}" value="✘" /></li>`;
+      done += `<li><p>●</p><h3>${item.content}</h3><input type="button" class="check"data-number="${index}" value="✔" /><input type="button" class="delete" data-num ="${index}" value="✘" /></li>`;
     }
   });
   list.innerHTML = done;
@@ -64,7 +64,7 @@ const all = document.querySelector(".all");
 all.addEventListener("click", function (e) {
   let allStr = "";
   data.forEach(function (item, index) {
-    allStr += `<li><p>📍</p><h3>${item.content}</h3><input type="button" class="check"data-number="${index}" value="✔" /><input type="button" class="delete" data-num ="${index}" value="✘" /></li>`;
+    allStr += `<li><p>●</p><h3>${item.content}</h3><input type="button" class="check"data-number="${index}" value="✔" /><input type="button" class="delete" data-num ="${index}" value="✘" /></li>`;
   });
   list.innerHTML = allStr;
 });
@@ -74,7 +74,7 @@ pending.addEventListener("click", function (e) {
   let undone = "";
   data.forEach(function (item, index) {
     if (item.status == "") {
-      undone += `<li><p>📍</p><h3>${item.content}</h3><input type="button" class="check"data-number="${index}" value="✔" /><input type="button" class="delete" data-num ="${index}" value="✘" /></li>`;
+      undone += `<li><p>●</p><h3>${item.content}</h3><input type="button" class="check"data-number="${index}" value="✔" /><input type="button" class="delete" data-num ="${index}" value="✘" /></li>`;
     }
   });
   list.innerHTML = undone;
