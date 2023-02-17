@@ -16,6 +16,24 @@ let data = [
     status: "",
   },
 ];
+function mynow() {
+  NowDate = new Date();
+  yy = NowDate.getFullYear();
+  mm = NowDate.getMonth() + 1;
+  dd = NowDate.getDate();
+  h = NowDate.getHours();
+  m = NowDate.getMinutes();
+  s = NowDate.getSeconds();
+}
+// 即時時間
+function current_time() {
+  mynow();
+  document.getElementById(
+    "current"
+  ).innerHTML = `<h4><span>NOW</span><br> ${yy} / ${mm} / ${dd}<br>${h} : ${m} : ${s}</h4> `;
+  setTimeout("current_time()", 1000);
+}
+
 const list = document.querySelector(".list");
 function init() {
   let str = "";
